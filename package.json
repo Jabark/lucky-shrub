@@ -1,0 +1,14 @@
+{
+  "name": "lucky-shrub",
+  "version": "1.0.0",
+  "description": "Lucky Shrub Garden Center Arizona",
+  "scripts": {
+    "build:sass": "sass --no-source-map styles",
+    "watch:sass": "sass --no-source-map --watch styles"
+  },
+  "author": "Jamie Barker",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.64.2"
+  }
+}

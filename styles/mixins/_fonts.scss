@@ -1,0 +1,14 @@
+$heading-font: 'Josefin Slab', serif;
+$text-font: 'Titillium Web', sans-serif;
+
+@mixin text($size:0, $weight:0, $color:'') {
+  @if $size != 0 {
+    font-size: $size;
+  }
+  @if $weight != 0 {
+    font-weight: $weight;
+  }
+  @if $color != '' {
+    color: $color;
+  }
+}

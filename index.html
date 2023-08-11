@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lucky Shrub</title>
+    <meta name="description" content="Lucky Shrub Garden Center Arizona">
+    <meta name="author" content="Jamie Barker">
+
+    <link rel="icon" href="assets/logo-image.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="all.css">
+
+    <meta property="og:title" content="Lucky Shrub Garden Center Arizona" />
+    <meta property="og:description" content="Welcome to Lucky Shrub Garden Center, Arizona" />
+    <meta property="og:image" content="/assets/logo-image.png" />
+</head>
+
+<body class="lsSite">
+    <header class="lsHeader">
+      <nav class="lsHeader-navigation">
+        <a href="index.html" class="lsHeader-logoLink">
+          <img class="lsHeader-logo" src="assets/logo-red.svg" alt="Lucky Shrub Garden Center" />
+        </a>
+
+        <input type="checkbox" id="Nav" name="Nav" class="lsHeader-navActivator" />
+        <label for="Nav" class="lsHeader-navIcon">☰</label>
+
+        <ul class="lsHeader-navList">
+          <li class="lsHeader-navListItem">
+            <a href="index.html" class="lsHeader-navListItemLink">Home</a>
+          </li>
+          <li class="lsHeader-navListItem">
+            <a href="index.html#menu" class="lsHeader-navListItemLink">Menu</a>
+          </li>
+          <li class="lsHeader-navListItem">
+            <a href="index.html#book" class="lsHeader-navListItemLink">Book</a>
+          </li>
+          <li class="lsHeader-navListItem">
+            <a href="index.html#about" class="lsHeader-navListItemLink">About</a>
+          </li>
+        </ul>
+    </header>
+    
+    <main class="lsMain">
+      <section class="lsMain-section">
+        <h1 class="lsMain-sectionHeading">Heading 1</h1>
+        <p class="lsMain-sectionText">
+          <img class="lsMain-sectionImage" src="https://dummyimage.com/200/26877f/ede7f1.png&text=Important+Image" alt="Important Image" />
+          Most important text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu felis tortor. Morbi nec ipsum bibendum, maximus neque sed, vehicula lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Phasellus non ultrices turpis.
+        </p>
+      </section>
+      <section class="lsMain-section">
+        <h2 class="lsMain-sectionHeading">Heading 2</h2>
+        <p class="lsMain-sectionText">
+          <img class="lsMain-sectionImage" src="https://dummyimage.com/200/26877f/ede7f1.png&text=Less Important+Image" alt="Less Important Image" />
+          Less important text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu felis tortor. Morbi nec ipsum bibendum, maximus neque sed, vehicula lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Phasellus non ultrices turpis.
+        </p>
+      </section>
+      <section class="lsMain-section">
+        <h2 class="lsMain-sectionHeading">Heading 2</h2>
+        <p class="lsMain-sectionText">
+          <img class="lsMain-sectionImage" src="https://dummyimage.com/200/26877f/ede7f1.png&text=Less Important+Image" alt="Less Important Image" />
+          Less important text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu felis tortor. Morbi nec ipsum bibendum, maximus neque sed, vehicula lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Phasellus non ultrices turpis.
+        </p>
+      </section>
+      <section class="lsMain-section">
+        <h2 class="lsMain-sectionHeading">Heading 2</h2>
+        <p class="lsMain-sectionText">
+          <img class="lsMain-sectionImage" src="https://dummyimage.com/200/26877f/ede7f1.png&text=Less Important+Image" alt="Less Important Image" />
+          Less important text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu felis tortor. Morbi nec ipsum bibendum, maximus neque sed, vehicula lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Phasellus non ultrices turpis.
+        </p>
+      </section>
+    </main>
+
+    <footer class="lsFooter">
+      <div class="lsFooter-section">
+        <img class="lsFooter-logo" src="assets/logo-offwhite.svg" alt="Lucky Shrub Garden Center" />
+      </div>
+      <div class="lsFooter-section">
+        <p class="lsFooter-copyright">&copy; Copyright Jamie Barker <span id="year"></span></p>
+      </div>
+    </footer>
+</body>
+
+<script>
+  var d = new Date();
+  var n = d.getFullYear();
+  document.getElementById('year').innerHTML = n;
+</script>
+
+</html>

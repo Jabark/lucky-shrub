@@ -1,0 +1,270 @@
+.lsHeader {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+
+  &-navigation {
+    align-items: center;
+    border-bottom: 2px solid $red;
+    flex: 1 0 100%;
+    flex-direction: column;
+    display: flex;
+    margin-bottom: gridSize(1) - 1;
+    padding-bottom: gridSize(1) - 1;
+    position: relative;
+
+    @include media(ld) {
+      flex-direction: row;
+    }
+  }
+
+  &-logoLink {
+    display: inline-block;
+    order: 2;
+  
+    @include media(ld) {
+      order: 0;
+    }
+  }
+
+  &-logo {
+    display: block;
+    flex: 1 0 100%;
+    height: 50vw;
+
+    @include media(ld) {
+      height: gridSize(15);
+      width: gridSize(15);
+    }
+  }
+
+  &-navActivator,
+  &-navList {
+    display: none;
+  }
+
+  &-navIcon {
+    color: $red;
+    font-size: 2rem;
+    margin-bottom: gridSize(1);
+    order: 0;
+    padding: 6px 10px;
+
+    @include media(ld) {
+      display: none;
+    }
+  }
+
+  &-navActivator:checked + &-navIcon {
+    background-color: $red;
+    color: $white;
+  }
+
+  &-navActivator:checked + &-navIcon + &-navList {
+    display: block;
+
+    @include media(ld) {
+      display: flex;
+    }
+  }
+
+  &-navList {
+    left: 0;
+    order: 1;
+    position: absolute;
+    right: 0;
+    top: gridSize(7);
+    z-index: 200;
+
+    @include media(phablet) {
+      left: 25%;
+      right: 25%;
+    }
+
+    @include media(ld) {
+      align-items: center;
+      align-self: flex-end;
+      display: flex;
+      flex: 1 0 auto;
+      justify-content: center;
+      position: static;
+    }
+  }
+
+  &-navListItem {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: $heading-font;
+    justify-content: center;
+    background-color: $red;
+    border-bottom: 1px solid $white;
+    text-align: center;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    @include media(ld) {
+      background-color: transparent;
+      font-size: 1.6rem;
+      display: inline-block;
+      margin-right: gridSize(1);
+      position: relative;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        .bioHeader-navListSub {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &-navListItemLink {
+    background-color: $red;
+    color: $white;
+    display: block;
+    flex: 1 0 100%;
+    font-weight: normal;
+    padding: 5px 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($red, 5%);
+      font-size: 1.8rem;
+    }
+
+    @include media(ld) {
+      flex-basis: auto;
+      background-color: transparent;
+      color: $red;
+      display: inline-block;
+      font-weight: 800;
+
+      &:not(:last-child) {
+        &::after {
+          color: $red;
+          display: inline-block;
+          padding-left: 5px;
+        }
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &-navListItemLinkButton {
+    @extend .lsHeader-navListItemLink;
+
+    + * {
+      display: none;
+    }
+
+    @include media(ld) {
+      display: none;
+
+      + * {
+        display: block;
+      }
+    }
+  }
+
+  &-navListItemIcon {
+    color: $red;
+    display: none;
+    // font-size: $px * 24;
+    font-weight: normal;
+
+    @include media(ld) {
+      display: inline-block;
+    }
+  }
+
+  &-navListItemIconText {
+    @include media(ld) {
+      display: none;
+    }
+  }
+
+  &-navListSub {
+    background-color: $red;
+    color: $white;
+    font-size: 0.9em;
+    list-style: disc inside;
+    // padding-bottom: $px * 5;
+    text-align: left;
+
+    @include media(ld) {
+      background-color: $white;
+      border: 1px solid $grey;
+      // border-radius: $px * 5;
+      // box-shadow: 0 ($px * 5) ($px * 10) rgba($red, 0.5);
+      color: $red;
+      display: none;
+      font-size: 1em;
+      left: 50%;
+      list-style: none;
+      // padding: ($px * 10) ($px * 20);
+      position: absolute;
+      // top: calc(100% + (#{$px} * 27));
+      transform: translateX(-50%);
+      // width: $px * 200;
+      z-index: 50;
+
+      &::before {
+        // border-bottom: ($px * 30) solid darken($grey, 10%);
+        // border-left: ($px * 75) solid transparent;
+        // border-right: ($px * 75) solid transparent;
+        bottom: 100%;
+        content: '';
+        display: block;
+        height: 0;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 0;
+      }
+
+      &::after {
+        // border-bottom: ($px * 29) solid $grey;
+        // border-left: ($px * 74) solid transparent;
+        // border-right: ($px * 74) solid transparent;
+        bottom: 100%;
+        content: '';
+        display: block;
+        height: 0;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 0;
+      }
+    }
+  }
+
+  &-navListItemSub {
+    @include media(ld) {
+      padding: 10px 0;
+    }
+  }
+
+  &-navListItemSubLink {
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    @include media(ld) {
+      color: $red;
+      top: 100%;
+    }
+  }
+}

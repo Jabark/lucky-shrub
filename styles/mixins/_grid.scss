@@ -1,0 +1,3 @@
+@function gridSize($number) {
+  @return 8px * $number;
+}

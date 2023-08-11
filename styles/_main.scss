@@ -1,0 +1,53 @@
+.lsMain {
+  display: flex;
+  flex-wrap: wrap;
+  
+
+  &-section {
+    background-color: $offWhite;
+    border-radius: gridSize(1);
+    flex: 1 1 100%;
+    margin: gridSize(1) 0;
+    padding: gridSize(1);
+
+    @include media(phablet) {
+      flex: 1 0 auto;
+      margin-right: gridSize(2);
+      max-width: calc(33.33% - (gridSize(1.35)));
+
+      &:first-child {
+        flex: 1 1 calc(100% - 2px);
+        margin-right: 0;
+        max-width: 100%;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    } 
+  }
+
+  &-sectionHeading {
+    padding: gridSize(1);
+    text-align: center;
+  }
+
+  &-sectionText {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+
+    @include media(hd) {
+      flex-direction: row;
+    }
+  }
+
+  &-sectionImage {
+    margin: gridSize(1) 0;
+    max-width: 100%;
+    
+    @include media(hd) {
+      margin-right: gridSize(2);
+    }
+  }
+}
